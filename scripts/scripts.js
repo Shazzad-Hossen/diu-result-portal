@@ -1,4 +1,6 @@
-
+document.addEventListener("contextmenu",(e)=>{
+    e.preventDefault();
+})
 const showloader=()=>{
     const loader= document.getElementById('loader').style.display='block';
 }
