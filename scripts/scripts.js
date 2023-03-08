@@ -19,7 +19,7 @@ const loadData= async (sem,id)=>{
     const res= await fetch(`http://software.diu.edu.bd:8189/result?grecaptcha=&semesterId=${sem}&studentId=${id}`);
     const data= await res.json();
     
-    
+    console.log(data);
     hideloader();
     appendTr(data);
 
