@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIU Result </title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <span id="loader" class="loader hidden"></span>
+
+    <main>
+        <select id="sem" class="select select-bordered w-full max-w-xs">
+            <option  value="" disabled selected>Select Your Semester</option>
+            <option  value="223">Fall-2022</option>
+            <option  value="222">Summer-2022</option>
+            <option  value="221">Spring-2022</option>
+            <option  value="213">Fall-2021</option>
+            <option  value="212">Summer-2021</option>
+            <option  value="211">Spring-2021</option>
+            <option  value="203">Fall-2020</option>
+            <option  value="202">Summer-2020</option>
+            <option  value="201">Spring-2020</option>
+            <option  value="193">Fall-2019</option>
+            <option  value="192">Summer-2019</option>
+            <option  value="191">Spring-2019</option>
+            <option  value="183">Fall-2018</option>
+            <option  value="182">Summer-2018</option>
+            <option  value="181">Spring-2018</option>
+            <option  value="173">Fall-2017</option>
+            <option  value="172">Summer-2017</option>
+            <option  value="171">Spring-2017</option>
+            <option  value="163">Fall-2016</option>
+            <option  value="162">Summer-2016</option>
+            <option  value="161">Spring-2016</option>
+            <option  value="153">Fall-2015</option>
+            <option  value="152">Summer-2015</option>
+            <option  value="151">Spring-2015</option>
+            <option  value="143">Fall-2014</option>
+            <option  value="142">Summer-2014</option>
+            <option  value="141">Spring-2014</option>
+            <option  value="133">Fall-2013</option>
+            <option  value="132">Summer-2013</option>
+            <option  value="131">Spring-2013</option>
+            <option  value="123">Fall-20012</option>
+            <option  value="122">Summer-2011</option>
+            <option  value="121">Spring-2011</option>
+            <option  value="103">Fall-2010</option>
+            <option  value="102">Summer-2010</option>
+            <option  value="101">Spring-2010</option>
+          
+          </select>
+
+          <input id="s_id" type="text" placeholder="Student ID" class="input input-bordered w-full max-w-xs" />
+
+          <button class="btn btn-outline" type="sybmit" onclick="getRes()">Find</button>
+
+
+          <section id="result-sec" class="hidden overflow-x-auto">
+            <div class="overflow-x-auto">
+                <table class="table w-full">
+                  <!-- head -->
+                  <thead>
+                    <tr>
+                      <th>Course Code</th>
+                      <th>Course Title</th>
+                      <th>Credit</th>
+                      <th>Grade</th>
+                      <th>Grade Point</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tbody">
+                  </tbody>
+                </table>
+
+              </div>
+
+              <div id="total-sgpa" class="bg-slate-100 p-4 font-semibold flex justify-center">Total SGPA</div>
+
+          </section>
+    </main>
+
+
+    <script src="./scripts/scripts.js"></script>
+</body>
+</html>
